@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h3 class="red">Hello from the index function within the candy app of Candy Queen!</h3>
+    <div class="candies">
+        {% for candy in candies %}
+        {% include 'candy/single_candy.html' with candy=candy %}
+{% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h1>{{ candy.name }}</h1>
+    <p>{{ candy.description }}</p>
+    <p>Manufacturer: {{ candy.manufacturer.name }}</p>
+    {% for candy_image in candy.candyimage_set.all %}
+        <img src=""{{ candy_image.image }}" class="candy-img" />
+    {% endfor %}
+
+{% endblock %}
